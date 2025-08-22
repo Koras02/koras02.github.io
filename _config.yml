@@ -1,3 +1,4 @@
-title: Koras02 Blog
-description: Koras02 Blog Sample
-url: https://koras02.github.io
+title: Koras02 Math Blog
+description: Koras02 Math Blog
+kramdown:
+  input: GFM
