@@ -6,5 +6,5 @@ permalink: /elementary.html
 
 # 초등 수학
 
-- [덧셈](/elementary_addition.html)
+- [1학년](./elementary/elementary_gradle1.html)
 - [피타고라스 정리](/elementary_pythagoras.html)

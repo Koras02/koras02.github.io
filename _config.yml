@@ -1,4 +1,10 @@
 title: Koras02 Math Blog
 description: Koras02 Math Blog
+markdown: kramdown
 kramdown:
-  input: GFM
+  math_engine: mathjax
+  syntax_highlighter_opts:
+    preview: none
+include:
+  - _pages
+livereload: true
