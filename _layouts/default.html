@@ -3,17 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <title>{{ page.title }}</title>
-    <script
-      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
-      async
-    ></script>
-    <style>
-      .left-math .mjx-block {
-        text-align: left !important;
-      }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}" />
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ],
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ],
+        },
+        options: {
+          renderActions: {
+            addMenu: [],
+          },
+        },
+        chtml: {
+          displayAlign: "left", // 블록 수식 왼쪽 정렬
+          displayIndent: "2em",
+        },
+      };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+      </scrip
+          <style>
+            .mjx-block {
+              text-align: left !important;
+              margin-left: 0 !important;
+              margin-right: 0 !important;
+            }
+          </style>
+          <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+    </script>
   </head>
   <body>
-    {{ content }}
+    {% include header.html %}
+    <main>{{ content }}</main>
+    {% include footer.html %}
   </body>
 </html>

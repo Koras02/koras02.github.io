@@ -22,6 +22,10 @@ permalink: /elementary/elementary_gradle1.html
 \]
 </p>
 
+<p>
+
+</p>
+
 ### 3. 수 세기
 
 - 1부터 100까지 숫자 세기
