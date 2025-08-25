@@ -1,0 +1,65 @@
+$dark-bg: #121212;
+$dark-text: #e0e0e0;
+$dark-link: #81d4fa;
+$dark-code-bg: #1e1e1e;
+
+$white-text: #000;
+$white-bg: #fff;
+$button-bg: #333;
+$button-hover-bg: #555;
+$button-color: #fff;
+
+// 버튼 크기 및 위치
+$button-size: 50px;
+$button-bottom: 20px;
+$button-right: 20px;
+
+body {
+  background-color: $white-bg;
+  color: $white-text;
+}
+
+#darkModeToggle {
+  position: fixed;
+  bottom: $button-bottom;
+  right: $button-right;
+  width: $button-size;
+  height: $button-size;
+  border-radius: 50%;
+  border: none;
+  background-color: $white-bg;
+  color: $button-color;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s, transform 0.2s;
+
+  &:hover {
+    background-color: $button-hover-bg;
+    transform: scale(1.1);
+  }
+
+  @media (max-width: 768px) {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    bottom: 15px;
+    right: 15px;
+  }
+}
+
+body.dark-mode {
+  background-color: $dark-bg;
+  color: #fff;
+
+  a {
+    color: $dark-link;
+  }
+
+  pre,
+  code {
+    background-color: $dark-code-bg;
+    color: $dark-text;
+  }
+}
